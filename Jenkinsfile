@@ -20,7 +20,7 @@ pipeline {
                     sh '''
                     aws --version
                     aws s3 ls
-                    echo "Hello S3 This is Chandrakant..." > index.html
+                    echo "Hello S3 This is Chandrakant... from $BUILD_NUMBER" > index.html
                     aws s3 cp index.html s3://$AWS_S3_BUCKET/index.html
                     '''
                 }
