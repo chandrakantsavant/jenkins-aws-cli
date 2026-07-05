@@ -13,7 +13,8 @@ pipeline {
                 }
             }
             environment {
-                AWS_S3_BUCKET = 'chand-tf-bucket'
+                AWS_S3_BUCKET = 'elasticbeanstalk-us-east-1-467091806853'
+                
             }
             steps {
                 withCredentials([usernamePassword(credentialsId: 'aws-cred', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
